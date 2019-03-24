@@ -1,0 +1,20 @@
+@import '/mapbox-gl/dist/mapbox-gl.css';
+html, jumbotron, .main-jumbotron, .main-сontainer, {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+.main-jumbotron {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+.main-сontainer {
+	height: calc(100vh - 101px);
+}

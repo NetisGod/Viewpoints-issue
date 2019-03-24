@@ -1,0 +1,34 @@
+{
+  "name": "world-top-viewpoints",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "mapbox-gl": "^0.52.0-beta.2",
+    "mapbox-gl-controls": "0.0.13",
+    "mapbox-gl-geocoder": "^2.0.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.4.1",
+    "react-infinite-scroll-component": "^4.2.0",
+    "react-map-gl": "^4.0.5",
+    "react-map-gl-geocoder": "^1.6.4",
+    "react-mapbox-gl": "^4.0.2",
+    "react-mapbox-gl-geocoder": "^1.0.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-scrollspy": "^3.3.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0",
+    "viewport-mercator-project": "^6.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

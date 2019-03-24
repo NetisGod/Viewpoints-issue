@@ -1,0 +1,232 @@
+.list-container {
+    margin: 2px;
+    margin-top: 0;
+    height: 100%;
+}
+
+.list-container .col-sm-12, .col-sm-6 {
+    margin: 0;
+    padding: 0;
+}
+
+.list-container-active {
+    margin: 2px;
+    margin-top: 0;
+}
+
+#not-active-item-container {
+    margin-top: 20px;
+}
+
+.list-panel {
+    background-color: #7a1f5f;
+    border-color: #7a1f5f;
+    -webkit-transition: .1s ease-out;
+    -webkit-transition-delay: 0.1s;
+    -o-transition: .1s ease-out;
+    -o-transition-delay: 0.5s;
+    -moz-transition: .1s ease-out;
+    -moz-transition-delay: 0.1s;
+    transition: .1s ease-out;
+    transition-delay: 0.1s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.list-panel:hover {
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+}
+
+.list-panel .panel-heading {
+    background-color: #7a1f5f;
+    border-color: #7a1f5f;
+}
+
+.list-panel-active {
+    margin: 0;
+}
+
+.list-panel-active:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+.list-panel .card-header {
+    padding: 0;
+    text-align: center;
+}
+
+.char-name {
+    margin: 0;
+    text-align: center;
+}
+
+.char-name-img {
+    height: 245px;
+    width: 358px;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.card-header .btn-close {
+    /* padding: 1px 6px; */
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    background-color: #007bff75;
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-header>.card-title {
+    font-size: 15px;
+}
+
+.list-panel.list-panel-active.card {
+    background-color: #c2e1f5;
+}
+
+.carousel.slide {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.carousel-control-prev {
+    margin-left: -50px;
+    width: 50px;
+}
+
+.carousel-control-next {
+    margin-right: -50px;
+    width: 50px
+}
+
+.active-img {
+    /* width: 500px; */
+    /* height: 400px; */
+}
+
+.tag-container {
+    margin: 2px 2px;
+    padding: 0;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    border-color: #7a1f5f;
+    text-decoration: none;
+}
+
+.tag-container:hover {
+    color: #fff;
+    background-color: #7a1f5f;
+    border-color: #7a1f5f;
+}
+
+.tag-container a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #7a1f5f;
+}
+
+.tag-container a:hover {
+    color: #fff;
+}
+
+.iframe-container {
+    position: relative;
+}
+
+.gallery-image-pano-icon {
+    background: url(//www.gstatic.com/images/icons/material/system/2x/360_white_36dp.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.switch-btn {
+    align-self: center;
+    position: absolute;
+    right: 3px;
+    cursor: pointer;
+    border: 1px solid #c2e1f5;
+    border-radius: 18px;
+    text-transform: uppercase;
+}
+
+.switch-btn .btn-list {
+    display: inline-block;
+    background-color: #c2e1f5;
+    padding: 0;
+    border-radius: 31px 0 0 31px;
+    border-right: 1px solid #c2e1f5;
+    margin: auto;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 17px;
+    text-decoration: none;
+    color: #c2e1f5;
+}
+
+.switch-btn .btn-map {
+    display: inline-block;
+    background-color: #c2e1f5;
+    padding: 0;
+    border-radius: 0 31px 31px 0;
+    padding-left: 14px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-right: 17px;
+    text-decoration: none;
+    color: #c2e1f5;
+}
+
+.switch-btn>.switch-btn-active {
+    background-color: #7a1f5f;
+    color: black;
+}
+
+/* Breakpoints  Add spme glitches*/
+
+@media (max-width: 1036px) {
+    .list-panel .panel-heading h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1003px) {
+    .list-panel .panel-heading h3 {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-panel .panel-heading h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .find-your-viewpoint span.label {
+        font-size: 14px;
+    }
+    .switch-btn .btn-map {
+        font-size: 10px;
+        padding-left: 6px;
+        padding-right: 8px;
+    }
+    .switch-btn .btn-list {
+        font-size: 10px;
+        padding-left: 8px;
+        padding-right: 6px;
+    }
+}
