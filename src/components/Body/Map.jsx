@@ -5,9 +5,8 @@ import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator } from 
 import { StylesControl } from 'mapbox-gl-controls';
 // import * as MapboxGeocoder from 'mapbox-gl-geocoder';
 
-// import Geocoder from 'react-map-gl-geocoder'
+import Geocoder from 'react-map-gl-geocoder'
 
-import Geocoder from 'react-mapbox-gl-geocoder'
 
 import '../Body/Map.css'
 import svg_find_in_area from '../../img/glyph-iconset-master/svg/si-glyph-arrow-three-way-2.svg'
@@ -47,12 +46,12 @@ class MapContainer extends Component {
 
 		map.addControl(new mapboxgl.ScaleControl({ position: 'bottom-right' }));
 
-		window.addEventListener("resize", this.checkMapParameters(map));
+		// window.addEventListener("resize", this.checkMapParameters(map));
 	}
 
-	componentWillMount() {
-		window.removeEventListener("resize", this.checkMapParameters)
-	}
+	// componentWillMount() {
+	// 	window.removeEventListener("resize", this.checkMapParameters)
+	// }
 
 	handleClickedMarker = (item) => {
 		this.props.updataViewport({
@@ -114,18 +113,18 @@ class MapContainer extends Component {
 	}
 
 	//test
-	checkMapParameters = (map) => {
+	// checkMapParameters = (map) => {
 
-		const width = document.getElementById('map-container').clientWidth,
-			height = document.getElementById('map-container').clientHeight;
+	// 	const width = document.getElementById('map-container').clientWidth,
+	// 		height = document.getElementById('map-container').clientHeight;
 
-		this.props.updataViewport({
-			...this.props.viewport,
-			width,
-			height
-		});
-		console.log(width);
-	}
+	// 	this.props.updataViewport({
+	// 		...this.props.viewport,
+	// 		width,
+	// 		height
+	// 	});
+	// 	console.log(width);
+	// }
 
 	render() {
 		const FindOnMapButtons = (
@@ -173,14 +172,7 @@ class MapContainer extends Component {
 
 		return (
 			<div id='map-container' className="map-container">
-				<Geocoder
-					mapboxApiAccessToken={MAPBOX_TOKEN}
-					onSelected={this.handleGeocoderViewportChange}
-					viewport={this.handleGeocoderViewportChange}
-					hideOnSelect={true}
-					style={{backgroundColor: 'white'}}
-				// queryParams={queryParams}
-				/>
+
 				<ReactMapGL
 					ref={this.mapRef}
 					{...this.props.viewport}
@@ -193,7 +185,11 @@ class MapContainer extends Component {
 					className="map"
 					transitionInterpolator={new FlyToInterpolator()}
 				>
-
+					<Geocoder
+						mapRef={this.mapRef}
+						onViewportChange={this.handleGeocoderViewportChange}
+						mapboxApiAccessToken={MAPBOX_TOKEN}
+					/>
 
 					{this.props.data.map((item, index) => {
 						if (!item.location) return;
